@@ -186,7 +186,7 @@ namespace Beatmap.Containers
                     if (!IsHeadNote((BaseNote)note)) continue;
                     collection.LoadedContainers.TryGetValue(note, out var container);
                     AttachedHead = container as NoteContainer;
-                    AttachedHead.transform.localScale = BaseChain.ChainScale;
+                    AttachedHead.transform.localScale = BaseChain.ChainHeadScale;
                     AttachedHead.transform.localPosition -= BaseChain.PosOffsetFactor * headDirection;
                     break;
                 }
@@ -201,7 +201,7 @@ namespace Beatmap.Containers
                 }
                 else
                 {
-                    AttachedHead.transform.localScale = BaseChain.ChainScale;
+                    AttachedHead.transform.localScale = BaseChain.ChainHeadScale;
                     AttachedHead.transform.localPosition -= BaseChain.PosOffsetFactor * headDirection;
                 }
             }

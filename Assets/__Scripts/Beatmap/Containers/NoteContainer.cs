@@ -133,7 +133,7 @@ namespace Beatmap.Containers
         {
             transform.localPosition = (Vector3)NoteData.GetPosition() +
                                       new Vector3(0, 0.5f, NoteData.Time * EditorScaleController.EditorScale);
-            transform.localScale = NoteData.GetScale() + new Vector3(0.5f, 0.5f, 0.5f);
+            transform.localScale = NoteData.GetScale();
 
             UpdateCollisionGroups();
 
